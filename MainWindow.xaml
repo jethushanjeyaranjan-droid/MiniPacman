@@ -1,0 +1,17 @@
+﻿<Window x:Class="MiniPacman.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiniPacman"
+        mc:Ignorable="d"
+        Title="Mini Pacman" Height="480" Width="640"
+KeyDown="Window_KeyDown" KeyUp="Window_KeyUp">
+    <Grid Background="#FF222222">
+        <Canvas Name="GameCanvas" ClipToBounds="True" Margin="0,-1,0,1">
+        </Canvas>
+        <TextBlock Name="HintText" Foreground="White" FontSize="12" Margin="8" VerticalAlignment="Top" HorizontalAlignment="Left">
+Gebruik pijltjestoetsen of WASD om Pacman te bewegen. Alleen Pacman aanwezig.
+        </TextBlock>
+    </Grid>
+</Window>
