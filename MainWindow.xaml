@@ -18,7 +18,7 @@
                    Margin="8"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Left"
-                   Text="Besturing: WASD / pijltjestoetsen / externe controller (SerialPort)"/>
+                   Text="Besturing: pijltjestoetsen of externe controller (SerialPort)"/>
 
         <Button Content="Restart"
                 Width="80"
