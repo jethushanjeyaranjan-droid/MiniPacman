@@ -154,13 +154,17 @@ namespace MiniPacman
             switch (e.Key)
             {
                 case Key.Left:
-                case Key.A: inputDir.X = -1; break;
+                    inputDir.X = -1;
+                    break;
                 case Key.Right:
-                case Key.D: inputDir.X = 1; break;
+                    inputDir.X = 1;
+                    break;
                 case Key.Up:
-                case Key.W: inputDir.Y = -1; break;
+                    inputDir.Y = -1;
+                    break;
                 case Key.Down:
-                case Key.S: inputDir.Y = 1; break;
+                    inputDir.Y = 1;
+                    break;
             }
             if (Math.Abs(inputDir.X) > 0.5 && Math.Abs(inputDir.Y) > 0.5) inputDir.Normalize();
         }
@@ -169,14 +173,10 @@ namespace MiniPacman
         {
             switch (e.Key)
             {
-                case Key.Left:
-                case Key.A: if (inputDir.X < 0) inputDir.X = 0; break;
-                case Key.Right:
-                case Key.D: if (inputDir.X > 0) inputDir.X = 0; break;
-                case Key.Up:
-                case Key.W: if (inputDir.Y < 0) inputDir.Y = 0; break;
-                case Key.Down:
-                case Key.S: if (inputDir.Y > 0) inputDir.Y = 0; break;
+                case Key.Left: if (inputDir.X < 0) inputDir.X = 0; break;
+                case Key.Right: if (inputDir.X > 0) inputDir.X = 0; break;
+                case Key.Up: if (inputDir.Y < 0) inputDir.Y = 0; break;
+                case Key.Down: if (inputDir.Y > 0) inputDir.Y = 0; break;
             }
         }
 
