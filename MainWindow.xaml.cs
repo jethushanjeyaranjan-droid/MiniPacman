@@ -23,7 +23,7 @@ namespace MiniPacman
         private long lastTicks = 0;
 
         // SerialPort
-        private SerialPort serialPort;
+        private SerialPort? serialPort;
 
         // Rode cirkels
         private List<Ellipse> redCircles = new List<Ellipse>();
@@ -32,7 +32,7 @@ namespace MiniPacman
 
         // Groene vlag
         private const double GreenFlagRadius = 20;
-        private Ellipse greenFlag;
+        private Ellipse? greenFlag;
 
         private bool gameOver = false;
 
@@ -92,7 +92,8 @@ namespace MiniPacman
             {
                 Debug.WriteLine($"Failed to open serial port {portName}: {ex.Message}");
                 MessageBox.Show($"Unable to open {portName}: {ex.Message}", "Serial Port Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                serialPort = null;
+                serialPort?.Dispose();
+                serialPort = null!;
             }
         }
 
