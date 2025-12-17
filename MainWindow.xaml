@@ -6,12 +6,26 @@
         xmlns:local="clr-namespace:MiniPacman"
         mc:Ignorable="d"
         Title="Mini Pacman" Height="480" Width="640"
-KeyDown="Window_KeyDown" KeyUp="Window_KeyUp">
+        KeyDown="Window_KeyDown"
+        KeyUp="Window_KeyUp">
+
     <Grid Background="#FF222222">
-        <Canvas Name="GameCanvas" ClipToBounds="True" Margin="0,-1,0,1">
-        </Canvas>
-        <TextBlock Name="HintText" Foreground="White" FontSize="12" Margin="8" VerticalAlignment="Top" HorizontalAlignment="Left">
-Gebruik pijltjestoetsen of WASD om Pacman te bewegen. Alleen Pacman aanwezig.
-        </TextBlock>
+        <Canvas Name="GameCanvas"
+                ClipToBounds="True"/>
+
+        <TextBlock Foreground="White"
+                   FontSize="12"
+                   Margin="8"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Left"
+                   Text="Besturing: WASD / pijltjestoetsen / externe controller (SerialPort)"/>
+
+        <Button Content="Restart"
+                Width="80"
+                Height="30"
+                Margin="8,32,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="RestartButton_Click"/>
     </Grid>
 </Window>
